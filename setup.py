@@ -8,7 +8,7 @@ Usage:
 from setuptools import setup
 
 APP = ['main.py']
-DATA_FILES = ['2kgbutton.png','250gbutton.png','addbutton.png','background.png','bean.png','brownale.png','darkr.png','mediumr.png','ground.png','subtractbutton.png','sweetcherry.png','weighticon.png','wildhoney.png']
+DATA_FILES = ['2kgbutton.png','250gbutton.png','2kgbuttonshade.png','250gbuttonshade.png','addbutton.png','background.png','bean.png','brownale.png','darkr.png','mediumr.png','ground.png','subtractbutton.png','sweetcherry.png','weighticon.png','wildhoney.png','sweetcherryshade.png','brownaleshade.png','wildhoneyshade.png','groundshade.png','darkrshade.png','beanshade.png','mediumrshade.png']
 OPTIONS = {}
 
 setup(
