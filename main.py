@@ -43,7 +43,7 @@ def select_wild_honey():
 
     selection['text'] = 'Wild Honey'
     roast_options_display()
-    show_wildhoney_shade()
+    hide_wildhoney_shade()
 
 
 def select_brown_ale():
@@ -52,7 +52,7 @@ def select_brown_ale():
 
     selection['text'] = 'Brown Ale Peaberry'
     roast_options_display()
-    show_brownale_shade()
+    hide_brownale_shade()
 
 
 def select_sweet_cherry():
@@ -61,7 +61,7 @@ def select_sweet_cherry():
 
     selection['text'] = 'Sweet Cherry'
     roast_options_display()
-    show_sweetcherry_shade()
+    hide_sweetcherry_shade()
 
 
 # Wildhoney icon
@@ -107,37 +107,36 @@ sweetcherryshade_icon = Button(root, image=scs, command=select_sweet_cherry)
 def hide_wildhoney_shade():
     wildhoneyshade_icon.place_forget()
     wildhoney_icon.place(x=20, y=150)
-
+    show_brownale_shade()
+    show_sweetcherry_shade()
 
 def hide_brownale_shade():
     brownaleshade_icon.place_forget()
     brownale_icon.place(x=250, y=150)
+    show_wildhoney_shade()
+    show_sweetcherry_shade()
 
 
 def hide_sweetcherry_shade():
     sweetcherryshade_icon.place_forget()
     sweetcherry_icon.place(x=480, y=150)
+    show_brownale_shade()
+    show_wildhoney_shade()
 
 
 def show_wildhoney_shade():
     wildhoney_icon.place_forget()
     wildhoneyshade_icon.place(x=20, y=150)
-    hide_brownale_shade()
-    hide_sweetcherry_shade()
 
 
 def show_brownale_shade():
     brownale_icon.place_forget()
     brownaleshade_icon.place(x=250, y=150)
-    hide_wildhoney_shade()
-    hide_sweetcherry_shade()
 
 
 def show_sweetcherry_shade():
     sweetcherry_icon.place_forget()
     sweetcherryshade_icon.place(x=480, y=150)
-    hide_brownale_shade()
-    hide_wildhoney_shade()
 
 
 # Center alignment variable
@@ -154,7 +153,7 @@ def medium_roast():
     roastSelectionText['text'] = 'Medium'
     roastSelectionText.place(x=roastX, y=450)
     coffee_type_display()
-    medium_shade_show()
+    hide_medium_shade()
 
 
 def dark_roast():
@@ -167,7 +166,7 @@ def dark_roast():
     roastSelectionText['text'] = 'Dark'
     roastSelectionText.place(x=roastX, y=450)
     coffee_type_display()
-    dark_shade_show()
+    hide_dark_shade()
 
 
 # Medium Roast Icon
@@ -201,23 +200,23 @@ roastSelectionText.config(bg='GRAY50', fg='white', font=('Courier', 20))
 def hide_medium_shade():
     mediumshaderoast_icon.place_forget()
     mediumroast_icon.place(x=20, y=370)
+    dark_shade_show()
 
 
 def hide_dark_shade():
     darkshaderoast_icon.place_forget()
     darkroast_icon.place(x=480, y=370)
+    medium_shade_show()
 
 
 def medium_shade_show():
     mediumroast_icon.place_forget()
     mediumshaderoast_icon.place(x=20, y=370)
-    hide_dark_shade()
 
 
 def dark_shade_show():
     darkroast_icon.place_forget()
     darkshaderoast_icon.place(x=480, y=370)
-    hide_medium_shade()
 
 
 def roast_options_display():
@@ -245,7 +244,7 @@ def ground_selected():
     typeSelectionText['text'] = 'Ground'
     typeSelectionText.place(x=selectx, y=670)
     weight_selection_display()
-    ground_shade_show()
+    hide_ground_shade()
 
 
 def beans_selected():
@@ -258,7 +257,7 @@ def beans_selected():
     typeSelectionText['text'] = 'Beans'
     typeSelectionText.place(x=selectx, y=670)
     weight_selection_display()
-    bean_shade_show()
+    hide_bean_shade()
 
 
 # Ground Icon
@@ -292,23 +291,23 @@ bean_coffee_shade_icon = Button(root, image=beanCoffee_shade, command=beans_sele
 def hide_bean_shade():
     bean_coffee_shade_icon.place_forget()
     beanCoffee_icon.place(x=480, y=590)
+    ground_shade_show()
 
 
 def hide_ground_shade():
     ground_coffee_shade_icon.place_forget()
     groundCoffeee_icon.place(x=20, y=590)
+    bean_shade_show()
 
 
 def bean_shade_show():
     beanCoffee_icon.place_forget()
     bean_coffee_shade_icon.place(x=480, y=590)
-    hide_ground_shade()
 
 
 def ground_shade_show():
     groundCoffeee_icon.place_forget()
     ground_coffee_shade_icon.place(x=20, y=590)
-    hide_bean_shade()
 
 
 def coffee_type_display():
@@ -330,7 +329,7 @@ def g250_selected():
     label['text'] = weight_selected
     display_number_bag()
     display_price()
-    show_250g_shade()
+    show_2kg_shade()
 
 
 def kg2_selected():
@@ -339,7 +338,7 @@ def kg2_selected():
     label['text'] = weight_selected
     display_number_bag()
     display_price()
-    show_2kg_shade()
+    show_250g_shade()
 
 
 label = Label(root, text='What Size?')
